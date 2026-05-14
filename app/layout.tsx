@@ -5,12 +5,12 @@ import "./globals.css";
 const geist = Geist({ variable: "--font-geist", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Flawless Truck Co | Custom & Restoration Paint Shop",
+  title: "Flawless Truck Co | Custom Paint & Color Matching",
   description:
-    "Flawless Truck Co specializes in custom paint jobs and full restorations on trucks, SUVs, and BMWs. Get a free quote today.",
+    "Flawless Truck Co specializes in custom paint jobs, color matching, and panel work on trucks, SUVs, and BMWs. Get a free quote today.",
   openGraph: {
-    title: "Flawless Truck Co | Custom & Restoration Paint",
-    description: "Custom paint. Flawless results. Trucks, restorations, and more.",
+    title: "Flawless Truck Co | Custom Paint & Color Matching",
+    description: "Custom paint. Perfect color matching. Trucks, BMWs, and more.",
     siteName: "Flawless Truck Co",
     type: "website",
   },

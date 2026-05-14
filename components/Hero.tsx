@@ -19,7 +19,7 @@ export default function Hero() {
         {/* Badge */}
         <div className="inline-flex items-center gap-2 bg-[#E63B2E]/10 border border-[#E63B2E]/30 rounded-full px-4 py-1.5 mb-8">
           <span className="w-1.5 h-1.5 rounded-full bg-[#E63B2E] animate-pulse" />
-          <span className="text-[#E63B2E] text-xs font-bold uppercase tracking-[0.2em]">Custom Paint & Restoration</span>
+          <span className="text-[#E63B2E] text-xs font-bold uppercase tracking-[0.2em]">Custom Paint & Color Matching</span>
         </div>
 
         <h1 className="text-5xl sm:text-6xl md:text-8xl font-black uppercase leading-none tracking-tight text-white mb-6">
@@ -28,7 +28,7 @@ export default function Hero() {
         </h1>
 
         <p className="text-gray-300 text-base sm:text-xl max-w-xl mx-auto mb-10 leading-relaxed">
-          Custom paint. Full restorations. From full-size trucks to classic BMWs — we make your vision flawless.
+          Custom paint. Perfect color matching. From full-size trucks to BMWs — we make your vehicle flawless.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

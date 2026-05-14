@@ -5,12 +5,12 @@ type FormState = "idle" | "submitting" | "success" | "error";
 
 const SERVICES = [
   "Custom Paint Job",
-  "Full Restoration",
-  "Collision Repair",
-  "Color Change",
-  "Partial / Panel Repaint",
-  "BMW / European",
-  "Detail & Paint Correction",
+  "Color Change (Full Respray)",
+  "OEM / Paint Matching",
+  "Panel or Spot Repaint",
+  "BMW / European Paint",
+  "Truck Paint",
+  "Prep & Paint Correction",
   "Other / Not Sure Yet",
 ];
 

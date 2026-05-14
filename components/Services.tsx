@@ -1,33 +1,33 @@
 const services = [
   {
     icon: "🎨",
-    title: "Custom Paint Jobs",
-    desc: "Full custom color work — single stage, base/clear, candy, metallics, and more. Your color, your vision.",
+    title: "Custom Paint",
+    desc: "Full custom color work — single stage, base/clear, candy, pearl, metallics. Your color, your vision, flawless execution.",
   },
   {
-    icon: "🔧",
-    title: "Full Restorations",
-    desc: "Bare metal to showroom. We strip it down, fix it right, and lay paint that lasts decades.",
+    icon: "🔬",
+    title: "Paint Matching",
+    desc: "Dead-on OEM and custom color matching. Whether it's a panel, a full respray, or blending into existing paint — you won't find the seam.",
   },
   {
     icon: "🚛",
-    title: "Trucks & Work Rigs",
-    desc: "Our bread and butter. F-250s, Silverados, Rams, Tacomas — we know trucks inside and out.",
+    title: "Trucks",
+    desc: "Our bread and butter. F-250s, Silverados, Rams, Tacomas — full resprays, color changes, and custom finishes on anything with a bed.",
   },
   {
     icon: "🏎️",
-    title: "European & Import",
-    desc: "Specialty work on BMWs, Mercedes, and imports. OEM color match or full respray, done right.",
+    title: "BMW & European",
+    desc: "Precision paint work on BMWs and European imports. OEM match or full custom color — same standard of finish either way.",
   },
   {
     icon: "💥",
-    title: "Collision Repair",
-    desc: "More than cosmetic — structural repair, filler work, and a paint match you can't find the seam on.",
+    title: "Panel & Spot Work",
+    desc: "Single panel, partial respray, or blend work. We'll match it so clean you won't know which panel was painted.",
   },
   {
     icon: "✨",
-    title: "Detail & Prep",
-    desc: "Every job includes a full paint correction and detail. We don't rush the prep — it shows in the finish.",
+    title: "Prep & Finish",
+    desc: "The prep is where paint jobs are won or lost. We don't skip steps — every surface is ready before a drop of paint goes down.",
   },
 ];
 
@@ -39,7 +39,7 @@ export default function Services() {
         <div className="mb-14">
           <p className="text-[#E63B2E] text-xs font-bold uppercase tracking-[0.25em] mb-3">What We Do</p>
           <h2 className="text-4xl sm:text-5xl font-black uppercase text-white leading-tight">
-            Every Job.<br />Flawless Finish.
+            Every Panel.<br />Flawless Finish.
           </h2>
         </div>
 

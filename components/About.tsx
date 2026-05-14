@@ -1,7 +1,7 @@
 const stats = [
-  { value: "10+", label: "Years in the Game" },
-  { value: "500+", label: "Jobs Completed" },
-  { value: "100%", label: "Custom Work" },
+  { value: "10+", label: "Years Painting" },
+  { value: "500+", label: "Vehicles Painted" },
+  { value: "100%", label: "Paint Focused" },
   { value: "0", label: "Shortcuts Taken" },
 ];
 
@@ -31,10 +31,10 @@ export default function About() {
             Obsessed With<br />The Finish.
           </h2>
           <p className="text-gray-400 text-base leading-relaxed mb-4">
-            Flawless Truck Co is a custom and restoration paint shop built for people who care. We specialize in full-size trucks and American iron — but we&apos;ve got a soft spot for BMWs and anything that deserves to look exceptional.
+            Flawless Truck Co is a custom paint and color matching shop built for people who care. We specialize in trucks — full resprays, custom colors, and dead-on panel matching — and we do the same precision work on BMWs and imports.
           </p>
           <p className="text-gray-400 text-base leading-relaxed mb-10">
-            Every job that rolls out of our shop has been prepped, blocked, and finished the right way. No shortcuts. No excuses. Just paint that looks like glass.
+            No restoration fluff. Just paint. Prepped right, laid right, finished right. Every panel that rolls out of our shop looks like glass.
           </p>
 
           {/* Stats */}
