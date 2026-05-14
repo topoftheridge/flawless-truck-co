@@ -1,59 +1,169 @@
-import Link from "next/link";
+"use client";
+import { useState } from "react";
+
+type Status = "idle" | "submitting" | "success" | "error";
+
+const SERVICES = [
+  "Custom Paint Job",
+  "Color Change (Full Respray)",
+  "OEM / Paint Matching",
+  "Panel or Spot Repaint",
+  "Truck Paint",
+  "BMW / European Paint",
+  "Prep & Paint Correction",
+  "Not Sure Yet",
+];
 
 export default function Hero() {
+  const [form, setForm] = useState({ name: "", phone: "", vehicle: "", service: "" });
+  const [status, setStatus] = useState<Status>("idle");
+
+  function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) {
+    setForm((p) => ({ ...p, [e.target.name]: e.target.value }));
+  }
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setStatus("submitting");
+    // TODO: wire to email / CRM
+    await new Promise((r) => setTimeout(r, 1200));
+    setStatus("success");
+  }
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
-      {/* Background — full bleed truck image from Unsplash */}
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1800&q=85"
-        alt="Custom painted truck"
-        className="absolute inset-0 w-full h-full object-cover object-center opacity-30"
-      />
+    <>
+      {/* ── Hero ── */}
+      <section className="relative h-[75vh] min-h-[520px] flex items-center justify-center overflow-hidden bg-black">
+        {/* Background image */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1800&q=85"
+          alt="Custom painted truck"
+          className="absolute inset-0 w-full h-full object-cover object-center opacity-35"
+        />
+        {/* Gradient — strong fade at bottom so card overlaps cleanly */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-black" />
 
-      {/* Gradient overlay — dark at bottom for text legibility */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/90" />
-
-      {/* Content */}
-      <div className="relative z-10 text-center px-5 max-w-4xl mx-auto pt-24">
-        {/* Badge */}
-        <div className="inline-flex items-center gap-2 bg-[#E63B2E]/10 border border-[#E63B2E]/30 rounded-full px-4 py-1.5 mb-8">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#E63B2E] animate-pulse" />
-          <span className="text-[#E63B2E] text-xs font-bold uppercase tracking-[0.2em]">Custom Paint & Color Matching</span>
+        {/* Hero copy */}
+        <div className="relative z-10 text-center px-5 max-w-3xl mx-auto pt-20 pb-32">
+          <div className="inline-flex items-center gap-2 bg-[#E63B2E]/10 border border-[#E63B2E]/30 rounded-full px-4 py-1.5 mb-7">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#E63B2E] animate-pulse" />
+            <span className="text-[#E63B2E] text-xs font-bold uppercase tracking-[0.2em]">Custom Paint & Color Matching</span>
+          </div>
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-black uppercase leading-none tracking-tight text-white mb-5">
+            Built to<br />
+            <span className="text-[#E63B2E]">Turn Heads.</span>
+          </h1>
+          <p className="text-gray-300 text-base sm:text-lg max-w-lg mx-auto">
+            Trucks, BMWs, and everything in between — we lay paint that looks like glass.
+          </p>
         </div>
+      </section>
 
-        <h1 className="text-5xl sm:text-6xl md:text-8xl font-black uppercase leading-none tracking-tight text-white mb-6">
-          Built to<br />
-          <span className="text-[#E63B2E]">Turn Heads.</span>
-        </h1>
+      {/* ── Quote Card (overlaps hero) ── */}
+      <div className="relative z-10 -mt-24 px-5 sm:px-8 pb-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-[#111] border border-white/8 rounded-2xl shadow-2xl shadow-black/60 overflow-hidden">
+            {/* Red top bar */}
+            <div className="h-1 w-full bg-[#E63B2E]" />
 
-        <p className="text-gray-300 text-base sm:text-xl max-w-xl mx-auto mb-10 leading-relaxed">
-          Custom paint. Perfect color matching. From full-size trucks to BMWs — we make your vehicle flawless.
-        </p>
+            <div className="p-7 sm:p-10">
+              {status === "success" ? (
+                <div className="text-center py-8">
+                  <div className="w-14 h-14 rounded-full bg-[#E63B2E]/10 border border-[#E63B2E]/30 flex items-center justify-center mx-auto mb-5">
+                    <svg className="w-7 h-7 text-[#E63B2E]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <h3 className="text-white font-black text-xl uppercase mb-2">Request Received</h3>
+                  <p className="text-gray-400 text-sm">We&apos;ll reach out within 24 hours. Talk soon.</p>
+                </div>
+              ) : (
+                <>
+                  <div className="mb-6">
+                    <h2 className="text-white font-black text-xl sm:text-2xl uppercase">Get a Fast Quote</h2>
+                    <p className="text-gray-500 text-sm mt-1">Tell us about your vehicle and we&apos;ll get back to you fast.</p>
+                  </div>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="#quote"
-            className="bg-[#E63B2E] text-white font-black px-8 py-4 rounded uppercase tracking-widest text-sm hover:bg-red-700 transition-all shadow-lg shadow-red-900/30"
-          >
-            Get a Free Quote
-          </Link>
-          <Link
-            href="#gallery"
-            className="border border-white/30 text-white font-bold px-8 py-4 rounded uppercase tracking-widest text-sm hover:border-white hover:bg-white/5 transition-all"
-          >
-            View Our Work
-          </Link>
+                  <form onSubmit={handleSubmit}>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+                      {/* Name */}
+                      <div>
+                        <label className="block text-gray-400 text-[10px] font-bold uppercase tracking-widest mb-2">
+                          Your Name <span className="text-[#E63B2E]">*</span>
+                        </label>
+                        <input
+                          name="name" type="text" required
+                          value={form.name} onChange={handleChange}
+                          placeholder="John Smith"
+                          className="w-full bg-[#0a0a0a] border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-[#E63B2E] transition-all"
+                        />
+                      </div>
+
+                      {/* Phone */}
+                      <div>
+                        <label className="block text-gray-400 text-[10px] font-bold uppercase tracking-widest mb-2">
+                          Phone <span className="text-[#E63B2E]">*</span>
+                        </label>
+                        <input
+                          name="phone" type="tel" required
+                          value={form.phone} onChange={handleChange}
+                          placeholder="(215) 555-0100"
+                          className="w-full bg-[#0a0a0a] border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-[#E63B2E] transition-all"
+                        />
+                      </div>
+
+                      {/* Vehicle */}
+                      <div>
+                        <label className="block text-gray-400 text-[10px] font-bold uppercase tracking-widest mb-2">
+                          Vehicle <span className="text-[#E63B2E]">*</span>
+                        </label>
+                        <input
+                          name="vehicle" type="text" required
+                          value={form.vehicle} onChange={handleChange}
+                          placeholder="2021 F-250, BMW M3..."
+                          className="w-full bg-[#0a0a0a] border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-[#E63B2E] transition-all"
+                        />
+                      </div>
+
+                      {/* Service */}
+                      <div>
+                        <label className="block text-gray-400 text-[10px] font-bold uppercase tracking-widest mb-2">
+                          Service Needed <span className="text-[#E63B2E]">*</span>
+                        </label>
+                        <select
+                          name="service" required
+                          value={form.service} onChange={handleChange}
+                          className="w-full bg-[#0a0a0a] border border-white/10 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-[#E63B2E] transition-all"
+                        >
+                          <option value="">Select...</option>
+                          {SERVICES.map((s) => <option key={s} value={s}>{s}</option>)}
+                        </select>
+                      </div>
+                    </div>
+
+                    <button
+                      type="submit"
+                      disabled={status === "submitting"}
+                      className="w-full bg-[#E63B2E] text-white font-black uppercase tracking-widest py-3.5 rounded-lg hover:bg-red-700 transition-all disabled:opacity-50 flex items-center justify-center gap-2 text-sm shadow-lg shadow-red-900/20"
+                    >
+                      {status === "submitting" ? (
+                        <>
+                          <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
+                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z" />
+                          </svg>
+                          Sending...
+                        </>
+                      ) : "Get My Free Quote →"}
+                    </button>
+                  </form>
+                </>
+              )}
+            </div>
+          </div>
         </div>
       </div>
-
-      {/* Scroll hint */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50">
-        <span className="text-white text-xs uppercase tracking-widest">Scroll</span>
-        <svg className="w-4 h-4 text-white animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-        </svg>
-      </div>
-    </section>
+    </>
   );
 }
