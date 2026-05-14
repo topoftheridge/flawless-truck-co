@@ -1,3 +1,5 @@
+import { Phone } from "lucide-react";
+
 const stats = [
   { value: "10+", label: "Years Painting" },
   { value: "500+", label: "Vehicles Painted" },
@@ -38,7 +40,7 @@ export default function About() {
           </p>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-5">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-5 mb-8">
             {stats.map((s) => (
               <div key={s.label} className="border-t-2 border-[#E63B2E] pt-4">
                 <p className="text-white font-black text-2xl mb-1">{s.value}</p>
@@ -46,6 +48,14 @@ export default function About() {
               </div>
             ))}
           </div>
+
+          <a
+            href="tel:4352257936"
+            className="inline-flex items-center gap-3 bg-[#E63B2E]/10 border border-[#E63B2E]/30 text-white font-black px-6 py-3.5 rounded-lg hover:bg-[#E63B2E]/20 transition-all"
+          >
+            <Phone className="w-5 h-5 text-[#E63B2E]" strokeWidth={2.5} />
+            <span className="text-lg">(435) 225-7936</span>
+          </a>
         </div>
       </div>
     </section>

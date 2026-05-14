@@ -1,3 +1,5 @@
+import { Phone } from "lucide-react";
+
 export default function Footer() {
   return (
     <footer className="bg-black border-t border-white/5 py-12 px-5 sm:px-8">
@@ -17,10 +19,18 @@ export default function Footer() {
           ))}
         </div>
 
-        {/* Copy */}
-        <p className="text-gray-600 text-xs text-center sm:text-right">
-          &copy; {new Date().getFullYear()} Flawless Truck Co.<br className="sm:hidden" /> All rights reserved.
-        </p>
+        {/* Phone */}
+        <a
+          href="tel:4352257936"
+          className="flex items-center gap-2 text-white font-black text-sm hover:text-[#E63B2E] transition-colors"
+        >
+          <Phone className="w-4 h-4 text-[#E63B2E]" strokeWidth={2.5} />
+          (435) 225-7936
+        </a>
+      </div>
+
+      <div className="max-w-7xl mx-auto mt-8 pt-6 border-t border-white/5 text-center text-gray-600 text-xs">
+        &copy; {new Date().getFullYear()} Flawless Truck Co. All rights reserved.
       </div>
     </footer>
   );

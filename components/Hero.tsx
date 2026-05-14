@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { Phone, ChevronDown } from "lucide-react";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -54,9 +55,25 @@ export default function Hero() {
             Built to<br />
             <span className="text-[#E63B2E]">Turn Heads.</span>
           </h1>
-          <p className="text-gray-300 text-base sm:text-lg max-w-lg mx-auto">
+          <p className="text-gray-300 text-base sm:text-lg max-w-lg mx-auto mb-8">
             Color matching, two-tones, part painting, graphics, and accessories — paint work done right.
           </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a
+              href="#quote"
+              className="bg-[#E63B2E] text-white font-black px-8 py-4 rounded uppercase tracking-widest text-sm hover:bg-red-700 transition-all shadow-lg shadow-red-900/30"
+            >
+              Get a Free Quote
+            </a>
+            <a
+              href="tel:4352257936"
+              className="flex items-center gap-3 border border-white/20 bg-white/5 text-white font-black px-8 py-4 rounded hover:border-white/40 hover:bg-white/10 transition-all"
+            >
+              <Phone className="w-5 h-5 text-[#E63B2E]" strokeWidth={2.5} />
+              <span className="text-lg tracking-wide">(435) 225-7936</span>
+            </a>
+          </div>
         </div>
       </section>
 
