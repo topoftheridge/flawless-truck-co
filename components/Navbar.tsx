@@ -21,9 +21,15 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 sm:h-18">
 
           {/* Logo */}
-          <Link href="/" className="flex flex-col leading-none">
-            <span className="text-white font-black text-xl sm:text-2xl tracking-tight uppercase">Flawless</span>
-            <span className="text-[#E63B2E] font-black text-[10px] sm:text-xs tracking-[0.25em] uppercase">Truck Co.</span>
+          <Link href="/">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/flawlesstruckcompanylogo.png"
+              alt="Flawless Truck Co"
+              width={160}
+              height={80}
+              className="h-12 w-auto object-contain"
+            />
           </Link>
 
           {/* Desktop */}
