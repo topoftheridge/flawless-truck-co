@@ -4,13 +4,13 @@ import { useState } from "react";
 type Status = "idle" | "submitting" | "success" | "error";
 
 const SERVICES = [
-  "Custom Paint Job",
-  "Color Change (Full Respray)",
-  "OEM / Paint Matching",
-  "Panel or Spot Repaint",
-  "Truck Paint",
-  "BMW / European Paint",
-  "Prep & Paint Correction",
+  "Paint Matching",
+  "Custom Two-Tone Paint",
+  "Automotive Part Painting",
+  "Suspension & Accessory Painting",
+  "Custom Designs & Graphics",
+  "Color Matched Accessories",
+  "Small Job / Custom Project",
   "Not Sure Yet",
 ];
 
@@ -55,7 +55,7 @@ export default function Hero() {
             <span className="text-[#E63B2E]">Turn Heads.</span>
           </h1>
           <p className="text-gray-300 text-base sm:text-lg max-w-lg mx-auto">
-            Trucks, BMWs, and everything in between — we lay paint that looks like glass.
+            Color matching, two-tones, part painting, graphics, and accessories — paint work done right.
           </p>
         </div>
       </section>

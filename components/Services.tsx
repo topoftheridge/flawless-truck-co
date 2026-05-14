@@ -1,33 +1,38 @@
 const services = [
   {
     icon: "🎨",
-    title: "Custom Paint",
-    desc: "Full custom color work — single stage, base/clear, candy, pearl, metallics. Your color, your vision, flawless execution.",
-  },
-  {
-    icon: "🔬",
     title: "Paint Matching",
-    desc: "Dead-on OEM and custom color matching. Whether it's a panel, a full respray, or blending into existing paint — you won't find the seam.",
+    desc: "Factory-style color matching for mirrors, handles, trim, small parts, accessories, and vehicle components. Dead-on every time.",
   },
   {
-    icon: "🚛",
-    title: "Trucks",
-    desc: "Our bread and butter. F-250s, Silverados, Rams, Tacomas — full resprays, color changes, and custom finishes on anything with a bed.",
+    icon: "🚗",
+    title: "Custom Two-Tone Paint",
+    desc: "Two-tone layouts and accent paint work for trucks, cars, and custom builds. Clean breaks, sharp lines, flawless blends.",
   },
   {
-    icon: "🏎️",
-    title: "BMW & European",
-    desc: "Precision paint work on BMWs and European imports. OEM match or full custom color — same standard of finish either way.",
+    icon: "🔩",
+    title: "Automotive Part Painting",
+    desc: "Mirrors, handles, mud flaps, trim pieces, grilles, bumpers, brackets — if it comes off the vehicle, we can paint it.",
   },
   {
-    icon: "💥",
-    title: "Panel & Spot Work",
-    desc: "Single panel, partial respray, or blend work. We'll match it so clean you won't know which panel was painted.",
+    icon: "⚙️",
+    title: "Suspension & Accessory Painting",
+    desc: "Custom painted springs, suspension pieces, brackets, and visible accessories for a cleaner, more intentional build.",
   },
   {
-    icon: "✨",
-    title: "Prep & Finish",
-    desc: "The prep is where paint jobs are won or lost. We don't skip steps — every surface is ready before a drop of paint goes down.",
+    icon: "✏️",
+    title: "Custom Designs & Graphics",
+    desc: "One-off designs, lettering, hood art, panel work, logos, and custom paint concepts. Bring an idea or start from scratch.",
+  },
+  {
+    icon: "🪞",
+    title: "Color Matched Accessories",
+    desc: "Accessories painted to match your vehicle's exact body color for a seamless, more complete finished look.",
+  },
+  {
+    icon: "🛠️",
+    title: "Small Jobs & Custom Projects",
+    desc: "Individual parts, specialty pieces, touch-up work, and unique requests. No job too small — if it needs paint, we'll talk.",
   },
 ];
 

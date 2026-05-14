@@ -4,13 +4,13 @@ import { useState } from "react";
 type FormState = "idle" | "submitting" | "success" | "error";
 
 const SERVICES = [
-  "Custom Paint Job",
-  "Color Change (Full Respray)",
-  "OEM / Paint Matching",
-  "Panel or Spot Repaint",
-  "BMW / European Paint",
-  "Truck Paint",
-  "Prep & Paint Correction",
+  "Paint Matching",
+  "Custom Two-Tone Paint",
+  "Automotive Part Painting",
+  "Suspension & Accessory Painting",
+  "Custom Designs & Graphics",
+  "Color Matched Accessories",
+  "Small Job / Custom Project",
   "Other / Not Sure Yet",
 ];
 

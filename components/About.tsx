@@ -31,10 +31,10 @@ export default function About() {
             Obsessed With<br />The Finish.
           </h2>
           <p className="text-gray-400 text-base leading-relaxed mb-4">
-            Flawless Truck Co is a custom paint and color matching shop built for people who care. We specialize in trucks — full resprays, custom colors, and dead-on panel matching — and we do the same precision work on BMWs and imports.
+            Flawless Truck Co does one thing: paint. Factory-accurate color matching, custom two-tones, part painting, suspension work, graphics, and accessories — all matched and finished to the same standard.
           </p>
           <p className="text-gray-400 text-base leading-relaxed mb-10">
-            No restoration fluff. Just paint. Prepped right, laid right, finished right. Every panel that rolls out of our shop looks like glass.
+            From a single mirror to a full custom two-tone build — every piece that leaves our shop looks like it was meant to be that way.
           </p>
 
           {/* Stats */}
