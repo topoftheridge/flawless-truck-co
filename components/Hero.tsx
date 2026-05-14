@@ -47,10 +47,7 @@ export default function Hero() {
 
         {/* Hero copy */}
         <div className="relative z-10 text-center px-5 max-w-3xl mx-auto pt-20 pb-32">
-          <div className="inline-flex items-center gap-2 bg-[#E63B2E]/10 border border-[#E63B2E]/30 rounded-full px-4 py-1.5 mb-7">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#E63B2E] animate-pulse" />
-            <span className="text-[#E63B2E] text-xs font-bold uppercase tracking-[0.2em]">Custom Paint & Color Matching</span>
-          </div>
+
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-black uppercase leading-none tracking-tight text-white mb-5">
             Built to<br />
             <span className="text-[#E63B2E]">Turn Heads.</span>

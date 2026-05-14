@@ -12,7 +12,7 @@ export default function Footer() {
             alt="Flawless Truck Co"
             width={160}
             height={80}
-            className="h-10 w-auto object-contain"
+            className="h-10 sm:h-14 w-auto object-contain"
           />
         </a>
 

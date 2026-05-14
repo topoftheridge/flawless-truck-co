@@ -28,7 +28,7 @@ export default function Navbar() {
               alt="Flawless Truck Co"
               width={160}
               height={80}
-              className="h-12 w-auto object-contain"
+              className="h-12 sm:h-16 w-auto object-contain"
             />
           </Link>
 
