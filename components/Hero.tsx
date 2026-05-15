@@ -38,12 +38,13 @@ export default function Hero() {
         {/* Background image */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1800&q=85"
-          alt="Custom painted truck"
-          className="absolute inset-0 w-full h-full object-cover object-center opacity-35"
+          src="/flawlesstruckcohero.jpg"
+          alt="Flawless Truck Co custom paint"
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
-        {/* Gradient — strong fade at bottom so card overlaps cleanly */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-black" />
+        {/* Dim overlay + bottom gradient for text and card overlap */}
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black" />
 
         {/* Hero copy */}
         <div className="relative z-10 text-center px-5 max-w-3xl mx-auto pt-20 pb-32">
